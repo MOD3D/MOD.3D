@@ -11,94 +11,9 @@
         <link href="css/bootstrap-icons.css" rel="stylesheet">
         <link href="css/main.css" rel="stylesheet">
         <link rel="icon" href="images/icons/Mod3DLogo.png" type="image/png">
-        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-qVBUq7bW1/9lYO4zCgXPVtuODVhLQaHg0KfKZg+FOkGHLf1Uw69kRxG8Z9C0c+yz" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4/J57nxbabP0MDZSc1frj0wH7S3GQuSsnM1ZR1G3C2dZjFQhM05U58f+4" crossorigin="anonymous"></script> -->
-   <style>
-  body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 0; }
-
-  /* Botón flotante redondo */
-  .donar-float {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #ff0033;
-    color: white;
-    width: 60px;
-    height: 60px;
-    font-size: 24px;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
-    transition: 0.3s;
-    z-index: 1000;
-  }
-  .donar-float:hover { background-color: #cc0029; }
-
-  /* Modal */
-  .modal {
-    display: none;
-    position: fixed;
-    z-index: 999;
-    padding-top: 80px;
-    left: 0; top: 0;
-    width: 100%; height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.6);
-  }
-  .modal-content {
-    background-color: #fff;
-    margin: auto;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 350px;
-    text-align: center;
-  }
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  .close:hover { color: black; }
-  .qr-img {
-    width: 250px;
-    margin-top: 10px;
-  }
-</style>
     </head>
     
     <body id="section_1">
-        <!-- Modal -->
-            <div id="donarModal" class="modal">
-                <div class="modal-content" style="display: flex; flex-direction: column; align-items: center;">
-                    <span class="close" onclick="cerrarModal()">&times;</span>
-                    <h2>Escanea para donar</h2>
-                    <img src="images/qr-Bancolombia.jpeg" alt="QR Bancolombia" class="qr-img">
-                    <p style="margin-top:15px; font-size:14px; color:#666;">
-                        Escanea este código con tu app Bancolombia
-                    </p>
-                    <a href="https://link.mercadopago.com.co/mod3d" target="_blank">
-                    <button style="background-color:#009EE3;color:white;padding:12px 20px;border:none;border-radius:5px;">
-                      Dona por MercadoPago
-                    </button>
-</a>
-
-                </div>
-
-
-            </div>
-
-            <script>
-            function abrirModal() {
-                document.getElementById('donarModal').style.display = 'block';
-            }
-            function cerrarModal() {
-                document.getElementById('donarModal').style.display = 'none';
-            }
-            </script>
-
         <header class="site-header">
             <div class="container">
                 <div class="row">
@@ -168,7 +83,13 @@
                         </li>
 
                         <li class="nav-item ms-3">
-                            <a class="nav-link custom-btn custom-border-btn btn" onclick="abrirModal()">Mendigaciones</a>
+                            <a class="nav-link custom-btn custom-border-btn btn" target="_blank" href="https://listado.mercadolibre.com.co/_CustId_173269988?item_id=MCO1582331833&category_id=MCO371999&seller_id=173269988&client=recoview-selleritems&recos_listing=true#origin=vip&component=sellerData&typeSeller=classic">
+                                <div class="icon-container">
+                                    <img class="icon-default" src="images/icons/mercadolibre_blue.png" alt="MercadoLibre">
+                                    <img class="icon-hover" src="images/icons/mercadolibre_white.png" alt="MercadoLibre">
+                                </div>
+                                Comprar
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -176,7 +97,6 @@
         </nav>
 
         <main>
-
             <section class="hero-section hero-section-full-height">
                 <div class="container-fluid">
                     <div class="row">
@@ -379,7 +299,7 @@
                                 </div>
                                 
                             </div> 
-                            <a style="height: 30%;" href="#section_4" class="custom-btn btn smoothscroll">Ver</a>
+                            <!-- <a style="height: 30%;" href="#section_4" class="custom-btn btn smoothscroll">Ver</a> -->
                         </div>
                     </div>
                 </div>
@@ -544,7 +464,7 @@
                                         alert("❌ Error al enviar: " + JSON.stringify(error));
                                     });
                                 });
-                                </script>
+                            </script>
                         </div>
 
                     </div>
@@ -552,23 +472,53 @@
             </section>
 
 
-            <section class="volunteer-section section-padding" id="section_5">
+            <section class="partners-section section-padding" id="section_5">
                 <div class="container">
                     <div class="row mb-4">
                         <div class="col-12">
-                            <h2 class="text-white">Aliados</h2>
+                            <h2 class="text-white text-center">Marcas que nos respaldan</h2>
                         </div>
                     </div>
 
-                    <div class="row text-center align-items-center">
-                    <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-                        <img src="images/logo_runacreativa.jpeg" class="volunteer-image" alt="">
-                        <img src="images/Kaju_-3.png" class="volunteer-image" alt="">
-                        <img src="images/WhatsApp Image 2025-02-08 at 11.47.17.jpeg" class="volunteer-image" alt="">
+                    <div class="infinite-carousel py-4">
+                        <div class="carousel-track">
+                            <!-- Primer set de imágenes con enlaces -->
+                            <a href="https://runacreativa.com" target="_blank" rel="noopener noreferrer">
+                                <img src="images/partners/RunaCreativa.png" class="volunteer-image" alt="Runa Creativa">
+                            </a>
+                            <a href="https://www.instagram.com/kaju.cosmetics" target="_blank" rel="noopener noreferrer">
+                                <img src="images/partners/Kaju.png" class="volunteer-image" alt="Kaju">
+                            </a>
+                            <a href="https://www.instagram.com/harmony.naturals.co" target="_blank" rel="noopener noreferrer">
+                                <img src="images/partners/HarmonyNaturals.png" class="volunteer-image" alt="Harmony Naturals">
+                            </a>
+                            <a href="https://www.instagram.com/anatya_cosmetics/#" target="_blank" rel="noopener noreferrer">
+                                <img src="images/partners/Anatya.png" class="volunteer-image" alt="Anatya">
+                            </a>
+                            <a href="https://www.instagram.com/vardimon.champusolido" target="_blank" rel="noopener noreferrer">
+                                <img src="images/partners/Vardimon.png" class="volunteer-image" alt="Vardimon">
+                            </a>
+                            
+                            <!-- Duplicado para efecto infinito -->
+                            <a href="https://runacreativa.com" target="_blank" rel="noopener noreferrer">
+                                <img src="images/partners/RunaCreativa.png" class="volunteer-image" alt="Runa Creativa">
+                            </a>
+                            <a href="https://www.instagram.com/kaju.cosmetics" target="_blank" rel="noopener noreferrer">
+                                <img src="images/partners/Kaju.png" class="volunteer-image" alt="Kaju">
+                            </a>
+                            <a href="https://www.instagram.com/harmony.naturals.co" target="_blank" rel="noopener noreferrer">
+                                <img src="images/partners/HarmonyNaturals.png" class="volunteer-image" alt="Harmony Naturals">
+                            </a>
+                            <a href="https://www.instagram.com/anatya_cosmetics/#" target="_blank" rel="noopener noreferrer">
+                                <img src="images/partners/Anatya.png" class="volunteer-image" alt="Anatya">
+                            </a>
+                            <a href="https://www.instagram.com/vardimon.champusolido" target="_blank" rel="noopener noreferrer">
+                                <img src="images/partners/Vardimon.png" class="volunteer-image" alt="Vardimon">
+                            </a>
+                        </div>
                     </div>
 
-                    </div>
-
+                    <br><br>
                     <div class="row">
                         <div class="col-12 text-center">
                             <h4 class="text-white mt-3">
@@ -580,71 +530,43 @@
             </section>
 
 
-
             <section class="testimonial-section section-padding section-bg">
                 <div class="container">
                     <div class="row">
-
-                        <div class="col-lg-8 col-12 mx-auto">
-                            <h2 class="mb-lg-3">Nuestros clientes</h2>
-                            
-                                <div id="testimonial-carousel" class="carousel carousel-fade slide" data-bs-ride="carousel">
-
-                                    <div class="carousel-inner">
+                        <div class="col-12">
+                            <h2 class="mb-lg-3">Lo que dicen nuestros clientes</h2>
+                            <div id="testimonial-carousel" class="carousel carousel-fade slide" data-bs-ride="carousel">
+                                <div class="d-flex justify-content-center">
+                                    <div class="carousel-inner carousel-partners">
                                         <div class="carousel-item active">
-                                           <div class="carousel-caption">
+                                            <div class="carousel-caption">
                                                 <h4 class="carousel-title">Su producto me pareció muy bueno ya que pude hacer la formas en mi champú sólido que necesitaba.</h4>
-
-                                                <small class="carousel-name"><span class="carousel-name-title">Diana Milena Torres Rios</span>, Jefa</small>
-                                           </div>
-                                        </div>
-
-                                        <!-- <div class="carousel-item">
-                                            <div class="carousel-caption">
-                                                <h4 class="carousel-title">Sed leo nisl, posuere at molestie ac, suscipit auctor mauris quis metus tempor orci</h4>
-
-                                                <small class="carousel-name"><span class="carousel-name-title">Thomas</span>, Partner</small>
+    
+                                                <small class="carousel-name"><span class="carousel-name-title">Rosmery Delgado</span>, Harmony Naturals</small>
                                             </div>
                                         </div>
-
+    
                                         <div class="carousel-item">
                                             <div class="carousel-caption">
-                                                <h4 class="carousel-title">Lorem Ipsum dolor sit amet, consectetur adipsicing kengan omeg kohm tokito charity theme</h4>
-
-                                                <small class="carousel-name"><span class="carousel-name-title">Jane</span>, Advisor</small>
+                                                <h4 class="carousel-title">Las prensas quedaron muy bien, gracias por tu excelente atención y servicio.</h4>
+    
+                                                <small class="carousel-name"><span class="carousel-name-title">Karen Acevedo</span>, Kajú</small>
                                             </div>
                                         </div>
-
-                                        <div class="carousel-item">
-                                            <div class="carousel-caption">
-                                                <h4 class="carousel-title">Sed leo nisl, posuere at molestie ac, suscipit auctor mauris quis metus tempor orci</h4>
-
-                                                <small class="carousel-name"><span class="carousel-name-title">Bob</span>, Entreprenuer</small>
-                                           </div>
-                                        </div> -->
-
-                                          <ol class="carousel-indicators">
-                                               <li data-bs-target="#testimonial-carousel" data-bs-slide-to="0" class="active">
-                                                    <img src="images/avatar/portrait-beautiful-young-woman-standing-grey-wall.jpg" class="img-fluid rounded-circle avatar-image" alt="avatar">
-                                               </li>
-<!-- 
-                                               <li data-bs-target="#testimonial-carousel" data-bs-slide-to="1" class="">
-                                                    <img src="images/avatar/portrait-young-redhead-bearded-male.jpg" class="img-fluid rounded-circle avatar-image" alt="avatar">
-                                               </li>
-
-                                               <li data-bs-target="#testimonial-carousel" data-bs-slide-to="2" class="">
-                                                    <img src="images/avatar/pretty-blonde-woman-wearing-white-t-shirt.jpg" class="img-fluid rounded-circle avatar-image" alt="avatar">
-                                               </li>
-
-                                               <li data-bs-target="#testimonial-carousel" data-bs-slide-to="3" class="">
-                                                    <img src="images/avatar/studio-portrait-emotional-happy-funny.jpg" class="img-fluid rounded-circle avatar-image" alt="avatar">
-                                               </li> -->
-                                          </ol>
-
-                                 </div>
+    
+                                        <ol class="carousel-indicators">
+                                            <li data-bs-target="#testimonial-carousel" data-bs-slide-to="0" class="active">
+                                                <img src="images/partners/HarmonyNaturals.png" class="img-fluid rounded-circle avatar-image" alt="avatar">
+                                            </li>
+    
+                                            <li data-bs-target="#testimonial-carousel" data-bs-slide-to="1" class="">
+                                                <img src="images/partners/Kaju.png" class="img-fluid rounded-circle avatar-image" alt="avatar">
+                                            </li>
+                                        </ol>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </section>

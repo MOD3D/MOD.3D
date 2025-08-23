@@ -314,6 +314,37 @@ strong {
   font-weight: var(--font-weight-normal);
   line-height: normal;
   padding: 15px 25px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 8px !important;
+}
+
+.custom-btn .icon-container {
+    position: relative;
+    width: 24px;
+    height: 18px;
+}
+
+.custom-btn .icon-default,
+.custom-btn .icon-hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 24px;
+    height: 18px;
+}
+
+.custom-btn .icon-hover {
+    opacity: 0;
+}
+
+.custom-btn:hover .icon-default {
+    opacity: 0;
+}
+
+.custom-btn:hover .icon-hover {
+    opacity: 1;
 }
 
 .navbar-expand-lg .navbar-nav .nav-link.custom-btn {
@@ -524,7 +555,6 @@ strong {
   top: 8px;
 }
 
-
 /*---------------------------------------
   SITE HEADER              
 -----------------------------------------*/
@@ -627,6 +657,9 @@ strong {
   background-color: var(--primary-color);
 }
 
+.carousel-partners {
+  width: 60%;
+}
 
 /*---------------------------------------
   FEATURE BLOCK              
@@ -709,51 +742,6 @@ strong {
   font-size: var(--h1-font-size);
   font-weight: var(--font-weight-bold);
   line-height: normal;
-}
-
-
-/*---------------------------------------
-  VOLUNTEER              
------------------------------------------*/
-.volunteer-section {
-  background: var(--secondary-color);
-  position: relative;
-  overflow: hidden;
-}
-
-.volunteer-section::after {
-  content: "";
-  background: var(--primary-color);
-  border-radius: 50%;
-  position: absolute;
-  bottom: -110px;
-  right: -80px;
-  width: 350px;
-  height: 350px;
-}
-
-.volunteer-form {
-  background: var(--white-color);
-  border-radius: var(--border-radius-medium);
-  padding: 50px;
-}
-
-.volunteer-image {
-  border-radius: 100%;
-  display: block;
-  margin: auto;
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-}
-
-.volunteer-section .custom-block-body {
-  max-width: 440px;
-  margin: 0 auto;
-}
-
-.volunteer-section .custom-block-body p {
-  line-height: 1.7;
 }
 
 
@@ -1381,7 +1369,7 @@ blockquote::before {
     min-height: inherit;
   }
 
-  .volunteer-section::after {
+  .partners-section::after {
     width: 450px;
     height: 450px;
   }
@@ -1512,7 +1500,7 @@ blockquote::before {
     padding-bottom: 50px;
   }
 
-  .volunteer-section::after {
+  .partners-section::after {
     width: 300px;
     height: 300px;
   }
@@ -1635,7 +1623,7 @@ blockquote::before {
     height: 150px;
   }
 
-  .volunteer-section::after {
+  .partners-section::after {
     width: 200px;
     height: 200px;
   }
@@ -1759,4 +1747,86 @@ blockquote::before {
 #widget-content .a .img{
 	width: 4px;
 	height: 4px;
+}
+
+
+
+/*---------------------------------------
+  PARTNERS              
+-----------------------------------------*/
+.partners-section {
+  background: var(--secondary-color);
+  position: relative;
+  overflow: hidden;
+}
+
+.partners-section::after {
+  content: "";
+  background: var(--primary-color);
+  border-radius: 50%;
+  position: absolute;
+  bottom: -110px;
+  right: -80px;
+  width: 420px;
+  height: 420px;
+}
+
+.volunteer-form {
+  background: var(--white-color);
+  border-radius: var(--border-radius-medium);
+  padding: 50px;
+}
+
+.partners-section .custom-block-body {
+  max-width: 440px;
+  margin: 0 auto;
+}
+
+.partners-section .custom-block-body p {
+  line-height: 1.7;
+}
+
+.infinite-carousel {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.infinite-carousel .carousel-track {
+    display: inline-flex;
+    animation: scroll 20s linear infinite;
+    align-items: center;
+    gap: 40px;
+}
+
+.infinite-carousel:hover .carousel-track {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.infinite-carousel .carousel-track img {
+    flex-shrink: 0;
+}
+
+.volunteer-image {
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    transition: all 0.4s ease;
+    cursor: pointer;
+    filter: grayscale(30%) brightness(0.9);
+    z-index: 10;
+}
+
+.volunteer-image:hover {
+  transform: scale(1.1);
+  filter: grayscale(0%);
+  cursor: pointer;
 }
