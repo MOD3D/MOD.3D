@@ -31,15 +31,12 @@
                             <li class="social-icon-item">
                                 <a href="https://www.tiktok.com/@mod3dth" target="_blank" class="social-icon-link bi-tiktok"></a>
                             </li>
-
                             <li class="social-icon-item">
                                 <a href="https://www.facebook.com/MOD.3DOficial" target="_blank" class="social-icon-link bi-facebook"></a>
                             </li>
-
                             <li class="social-icon-item">
                                 <a href="https://instagram.com/mod3d_" target="_blank" class="social-icon-link bi-instagram"></a>
                             </li>
-
                             <li class="social-icon-item">
                                 <a href="https://wa.me/573209005608" target="_blank" class="social-icon-link bi-whatsapp"></a>
                             </li>
@@ -69,19 +66,15 @@
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="#top">Inicio</a>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="#section_2">Nosotros</a>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="#section_3">Servicios</a>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="#section_4">Contacto</a>
                         </li>
-
                         <li class="nav-item ms-3">
                             <a class="nav-link custom-btn custom-border-btn btn" target="_blank" href="https://listado.mercadolibre.com.co/_CustId_173269988?item_id=MCO1582331833&category_id=MCO371999&seller_id=173269988&client=recoview-selleritems&recos_listing=true#origin=vip&component=sellerData&typeSeller=classic">
                                 <div class="icon-container">
@@ -282,7 +275,7 @@
                         </div>
 
                         <!-- Counters -->
-                        <div class="custom-text-box d-flex flex-wrap d-lg-block mb-lg-0 mt-4">
+                        <div class="custom-text-box d-flex flex-wrap d-lg-block">
                             <div class="counter-thumb"> 
                                 <span class="counter-text">Creado en</span>
                                 <div class="d-flex">
@@ -315,11 +308,10 @@
                             <h2 class="mb-0">Creación sin límites:<br>impresión <strong>3D</strong> y presencia <strong>digital</strong>.</h2>
                         </div>
 
-                        <div class="col-lg-5 col-12">
-                            <a href="#" class="me-4">Consultar servicios</a>
-                            <a href="#section_4" class="custom-btn btn smoothscroll">Cotizar</a>
+                        <div class="col-lg-5 col-12 d-flex align-items-center">
+                            <a href="services.html" class="me-4">Consultar servicios</a>
+                            <a href="quote.html" class="custom-btn btn btn-cotizar">Cotizar</a>
                         </div>
-
                     </div>
                 </div>
             </section>
@@ -348,7 +340,7 @@
                                     <li>Prototipos y piezas técnicas</li>
                                     <li>Entrega física o digital</li>
                                 </ul>
-                                <!-- <button class="btn btn-warning">Mas informacion</button> -->
+                                <button class="btn btn-warning" onclick="goToService('impresion3d')">Más información</button>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6">
@@ -361,9 +353,9 @@
                                     <li>Diseño de PCBs y esquemáticos</li>
                                     <li>Programación Arduino, ESP32</li>
                                     <li>Domótica e IoT</li>
-                                    <!-- <li>Simulación y validación</li> -->
+                                    <li>Simulación y validación</li>
                                 </ul>
-                                <button style="width:95%;height:5%;" class="btn btn-warning" onclick="window.location.href='services.html'">Mas informacion</button>
+                                <button class="btn btn-warning" onclick="goToService('automatizacion')">Más información</button>
                             </div>
                         </div>
                         <div class="col-md-4 col-sm-6">
@@ -372,13 +364,13 @@
                                     <h3>Desarrollo Web</h3>
                                 </div>
                                 <ul>
-                                     <li>Diseños adaptables</li>
-                                     <li>Integración con redes sociales</li>
+                                    <li>Diseños adaptables</li>
+                                    <li>Integración con redes sociales</li>
                                     <li>Personalización de estilos</li>
                                     <li>SEO básico</li>
                                     <li>Entrega lista para publicar</li>
                                 </ul>
-                                <!-- <button class="btn btn-warning">Get started</button> -->
+                                <button class="btn btn-warning" onclick="goToService('desarrolloweb')">Más información</button>
                             </div>
                         </div>
                     </div>
@@ -593,8 +585,8 @@
 
                         <ul class="footer-menu">
                             <li class="footer-menu-item"><a href="#section_2" class="footer-menu-link">Nosotros</a></li>
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Servicios</a></li>
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Cotizar</a></li>
+                            <li class="footer-menu-item"><a href="services.html" class="footer-menu-link">Servicios</a></li>
+                            <li class="footer-menu-item"><a href="quote.html" class="footer-menu-link">Cotizar</a></li>
                         </ul>
                     </div>
 
@@ -623,7 +615,6 @@
             <div class="site-footer-bottom">
                 <div class="container">
                     <div class="row">
-
                         <div class="col-lg-6 col-md-7 col-12">
                             <p class="copyright-text mb-0">Copyright © 2025 <a href="#">Mod.3D</a></p>
                         </div>
@@ -633,21 +624,17 @@
                                 <li class="social-icon-item">
                                     <a href="#" class="social-icon-link bi-tiktok"></a>
                                 </li>
-
                                 <li class="social-icon-item">
                                     <a href="#" class="social-icon-link bi-facebook"></a>
                                 </li>
-
                                 <li class="social-icon-item">
                                     <a href="#" class="social-icon-link bi-instagram"></a>
                                 </li>
-
                                 <li class="social-icon-item">
                                     <a href="#" class="social-icon-link bi-whatsapp"></a>
                                 </li>
                             </ul>
                         </div>
-                        
                     </div>
                 </div>
             </div>
@@ -659,7 +646,7 @@
         <script src="js/jquery.sticky.js"></script>
         <script src="js/click-scroll.js"></script>
         <script src="js/counter.js"></script>
-        <script src="js/custom.js"></script>
+        <script src="js/main.js"></script>
 
     </body>
 

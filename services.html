@@ -5,18 +5,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="Mod.3D">
 
-        <title>Mod.3D</title>
+        <title>Servicios - Mod.3D</title>
 
         <link href="css/bootstrap.min.css" rel="stylesheet">
         <link href="css/bootstrap-icons.css" rel="stylesheet">
         <link href="css/main.css" rel="stylesheet">
+        <link href="css/services.css" rel="stylesheet">
         <link rel="icon" href="images/icons/Mod3DLogo.png" type="image/png">
-        <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-qVBUq7bW1/9lYO4zCgXPVtuODVhLQaHg0KfKZg+FOkGHLf1Uw69kRxG8Z9C0c+yz" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4/J57nxbabP0MDZSc1frj0wH7S3GQuSsnM1ZR1G3C2dZjFQhM05U58f+4" crossorigin="anonymous"></script> -->
     </head>
     
-    <body id="section_1">
-
+    <body>
         <header class="site-header">
             <div class="container">
                 <div class="row">
@@ -34,15 +32,12 @@
                             <li class="social-icon-item">
                                 <a href="https://www.tiktok.com/@mod3dth" target="_blank" class="social-icon-link bi-tiktok"></a>
                             </li>
-
                             <li class="social-icon-item">
                                 <a href="https://www.facebook.com/MOD.3DOficial" target="_blank" class="social-icon-link bi-facebook"></a>
                             </li>
-
                             <li class="social-icon-item">
                                 <a href="https://instagram.com/mod3d_" target="_blank" class="social-icon-link bi-instagram"></a>
                             </li>
-
                             <li class="social-icon-item">
                                 <a href="https://wa.me/573209005608" target="_blank" class="social-icon-link bi-whatsapp"></a>
                             </li>
@@ -72,98 +67,309 @@
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="#top">Inicio</a>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="#section_2">Nosotros</a>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="#section_3">Servicios</a>
                         </li>
-
                         <li class="nav-item">
                             <a class="nav-link click-scroll" href="#section_4">Contacto</a>
                         </li>
-
                         <li class="nav-item ms-3">
-                            <a class="nav-link custom-btn custom-border-btn btn" href="donate.html">Donate</a>
+                            <a class="nav-link custom-btn custom-border-btn btn" target="_blank" href="https://listado.mercadolibre.com.co/_CustId_173269988?item_id=MCO1582331833&category_id=MCO371999&seller_id=173269988&client=recoview-selleritems&recos_listing=true#origin=vip&component=sellerData&typeSeller=classic">
+                                <div class="icon-container">
+                                    <img class="icon-default" src="images/icons/mercadolibre_blue.png" alt="MercadoLibre">
+                                    <img class="icon-hover" src="images/icons/mercadolibre_white.png" alt="MercadoLibre">
+                                </div>
+                                Comprar
+                            </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-<main>
-    <section class="section-padding price-section" id="section_3">
-        <div class="container">
-            <div class="title text-center">
-                <h2>Servicios</h2>
-                <hr>
-                <p>Soluciones en diseño 3D, automatización, electrónica y desarrollo web para proyectos personales, empresariales o educativos. Todo en un solo lugar.</p>
-            </div>
-
-            <div class="services-row">
-                <!-- Servicio 1 -->
-                <div class="plan">
-                    <div class="plan_title">
-                        <h3>Impresión & Modelado 3D</h3>
+        <main>
+            <section class="section-padding" id="section_3">
+                <div class="container">
+                    <div class="title text-center">
+                        <h2>Servicios</h2>
+                        <hr>
+                        <p>
+                            En <strong>Mod3D</strong> ofrecemos un conjunto integral de soluciones que combinan 
+                            <span style="white-space:nowrap;">diseño e impresión 3D</span>, 
+                            <span style="white-space:nowrap;">automatización electrónica</span> y 
+                            <span style="white-space:nowrap;">desarrollo web</span>, pensadas para impulsar tanto proyectos 
+                            personales como iniciativas empresariales y educativas. Cada servicio se adapta a tus necesidades específicas, con entregables claros, documentación técnica 
+                            y soporte inicial para que puedas dar el siguiente paso con confianza. 
+                            Cuéntanos qué necesitas y juntos encontraremos la mejor manera de hacerlo realidad.
+                        </p>
                     </div>
-                    <ul>
-                            <li>Diseño 3D personalizado según requerimientos.</li>
-                            <li>Impresión con materiales PLA, PETG o ABS.</li>
-                            <li>Calidades disponibles: estándar o alta precisión.</li>
-                            <li>Producción de prototipos y piezas técnicas.</li>
-                            <li>Modelado en SolidWorks, Blender, Fusion 360, etc.</li>
-                            <li>Formatos entregables: STL, STEP, OBJ y más.</li>
-                            <li>Entrega en formato físico o archivo digital listo para imprimir.</li>
-                       
-                        <button class="btn btn-warning" onclick="window.location.href='impresion3d.html'">Más información</button>
+
+                    <ul class="nav nav-tabs custom-tabs" id="servicesTabs" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="impresion3d-tab" data-bs-toggle="tab" data-bs-target="#impresion3d" type="button" role="tab">
+                                <i class="bi bi-printer"></i> 
+                                <span>Impresión 3D</span>
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="automatizacion-tab" data-bs-toggle="tab" data-bs-target="#automatizacion" type="button" role="tab">
+                                <i class="bi bi-robot"></i>
+                                <span>Automatización</span>
+                            </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="desarrolloweb-tab" data-bs-toggle="tab" data-bs-target="#desarrolloweb" type="button" role="tab">
+                                <i class="bi bi-laptop"></i>
+                                <span>Desarrollo Web</span>
+                            </button>
+                        </li>
                     </ul>
-                </div>
+
+                    <div class="tab-content" id="servicesTabContent">
+                        <div class="tab-pane fade show active" id="impresion3d" role="tabpanel">
+                            <div class="services-grid">
+                                <div class="service-card-modern">
+                                    <div class="service-image">
+                                        <img src="images/services/diseño3D.png" alt="Proceso de diseño 3D en software">
+                                    </div>
+                                    <h3>Diseño 3D Personalizado</h3>
+                                    <p class="service-description">
+                                        Creamos modelos 3D únicos adaptados a tus requerimientos específicos. Desde conceptos iniciales hasta diseños técnicos detallados.
+                                    </p>
+                                    <ul class="features-list">
+                                        <li>Consultoría de diseño personalizada</li>
+                                        <li>Modelado en SolidWorks, Blender, Fusion 360</li>
+                                        <li>Iteraciones hasta tu satisfacción completa</li>
+                                        <li>Optimización específica para impresión</li>
+                                    </ul>
+                                    <a href="#" class="cta-button">Solicitar Cotización</a>
+                                </div>
+
+                                <div class="service-card-modern">
+                                    <div class="service-image">
+                                        <img src="images/services/filamentos.png" alt="Filamentos con muestras de colores">
+                                    </div>
+                                    <h3>Materiales de Calidad</h3>
+                                    <p class="service-description">
+                                        Trabajamos con los mejores materiales del mercado para garantizar durabilidad y acabados excepcionales.
+                                    </p>
+                                    <ul class="features-list">
+                                        <li><strong>PLA:</strong> Biodegradable, ideal para prototipos</li>
+                                        <li><strong>PETG:</strong> Resistente químicamente, transparente</li>
+                                        <li><strong>ABS:</strong> Alta resistencia mecánica y térmica</li>
+                                        <li>Amplia gama de colores disponibles</li>
+                                    </ul>
+                                    <a href="#" class="cta-button">Ver Materiales</a>
+                                </div>
+
+                                <div class="service-card-modern">
+                                    <div class="service-image">
+                                        <img src="images/services/impresora.png" alt="Impresas de alta precisión">
+                                    </div>
+                                    <h3>Doble Nivel de Precisión</h3>
+                                    <p class="service-description">
+                                        Ofrecemos dos calidades para adaptarnos a tu presupuesto: desde prototipos rápidos hasta piezas técnicas de precisión.
+                                    </p>
+                                    <ul class="features-list">
+                                        <li><strong>Estándar:</strong> Prototipos y modelos generales</li>
+                                        <li><strong>Alta precisión:</strong> Piezas técnicas detalladas</li>
+                                        <li>Control de calidad riguroso</li>
+                                        <li>Tolerancias dimensionales certificadas</li>
+                                    </ul>
+                                    <a href="#" class="cta-button">Comparar Calidades</a>
+                                </div>
+
+                                <div class="service-card-modern">
+                                    <div class="service-image">
+                                        <img src="images/services/entregaPiezas3D.png" alt="Paquete con piezas física o archivos digitales">
+                                    </div>
+                                    <h3>Entrega Flexible</h3>
+                                    <p class="service-description">
+                                        Recibe tu proyecto como prefieras: físicamente impreso, archivos digitales, o ambos con documentación completa.
+                                    </p>
+                                    <ul class="features-list">
+                                        <li>Formatos: STL, STEP, OBJ y más</li>
+                                        <li>Archivo digital listo para imprimir</li>
+                                        <li>Entrega física con embalaje seguro</li>
+                                        <li>Documentación técnica incluida</li>
+                                    </ul>
+                                    <a href="#" class="cta-button">Métodos de Entrega</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <div class="tab-pane fade" id="automatizacion" role="tabpanel">
+                            <div class="services-grid">
+                                <div class="service-card-modern">
+                                    <div class="service-image">
+                                        <img src="images/services/sistemasControl.png" alt="Sistema de control con sensores">
+                                    </div>
+                                    <h3>Sistemas de Control</h3>
+                                    <p class="service-description">
+                                        Diseñamos y desarrollamos sistemas completos de automatización con sensores, actuadores y controladores inteligentes.
+                                    </p>
+                                    <ul class="features-list">
+                                        <li>Integración de sensores y actuadores</li>
+                                        <li>Control de motores paso a paso y servos</li>
+                                        <li>Sistemas de relés y contactores</li>
+                                        <li>Interfaces de usuario intuitivas</li>
+                                    </ul>
+                                    <a href="#" class="cta-button">Ver Proyectos</a>
+                                </div>
+
+                                <div class="service-card-modern">
+                                    <div class="service-image">
+                                        <img src="images/services/esquemaElectronico.png" alt="Esquemático electrónico">
+                                    </div>
+                                    <h3>Diseño de PCBs</h3>
+                                    <p class="service-description">
+                                        Creamos circuitos impresos profesionales desde el esquemático hasta los archivos Gerber listos para fabricación.
+                                    </p>
+                                    <ul class="features-list">
+                                        <li>Esquemáticos profesionales detallados</li>
+                                        <li>Layout de PCB optimizado</li>
+                                        <li>Archivos Gerber para fabricación</li>
+                                        <li>Simulación previa a la fabricación</li>
+                                    </ul>
+                                    <a href="#" class="cta-button">Cotizar PCB</a>
+                                </div>
+
+                                <div class="service-card-modern">
+                                    <div class="service-image">
+                                        <img src="images/services/arduinoPlaca.png" alt="Códigos en Arduino IDE con placas ESP32">
+                                    </div>
+                                    <h3>Programación Embebida</h3>
+                                    <p class="service-description">
+                                        Desarrollo de firmware optimizado para microcontroladores Arduino, ESP32 y STM32 con código fuente editable.
+                                    </p>
+                                    <ul class="features-list">
+                                        <li><strong>Arduino:</strong> Prototipado rápido y educación</li>
+                                        <li><strong>ESP32:</strong> Conectividad WiFi y Bluetooth</li>
+                                        <li><strong>STM32:</strong> Alto rendimiento industrial</li>
+                                        <li>Código comentado y documentado</li>
+                                    </ul>
+                                    <a href="#" class="cta-button">Ver Códigos</a>
+                                </div>
+
+                                <div class="service-card-modern">
+                                    <div class="service-image">
+                                        <img src="images/services/solucionesIoT.png" alt="Casa inteligente con dispositivos conectados">
+                                    </div>
+                                    <h3>Soluciones IoT</h3>
+                                    <p class="service-description">
+                                        Desarrollamos sistemas inteligentes para el hogar y la industria con conectividad total y control remoto.
+                                    </p>
+                                    <ul class="features-list">
+                                        <li>Domótica: iluminación, clima, seguridad</li>
+                                        <li>Monitoreo remoto en tiempo real</li>
+                                        <li>Integración con asistentes virtuales</li>
+                                        <li>Aplicaciones móviles personalizadas</li>
+                                    </ul>
+                                    <a href="#" class="cta-button">Automatizar Hogar</a>
+                                </div>
+                            </div>
+                        </div>
 
 
-                <!-- Servicio 2 -->
-                <div class="plan">
-                    <div class="plan_title">
-                        <h3>Automatización & Electrónica</h3>
+                        <div class="tab-pane fade show" id="desarrolloweb" role="tabpanel">
+                            <div class="services-grid">
+                                <div class="service-card-modern">
+                                    <div class="service-image">
+                                        <img src="images/services/diseñoResponsive.png" alt="Diseño responsive">
+                                    </div>
+                                    <h3>Diseño Responsive</h3>
+                                    <p class="service-description">
+                                        Creamos sitios web que se adaptan perfectamente a cualquier dispositivo, garantizando una experiencia óptima.
+                                    </p>
+                                    <ul class="features-list">
+                                        <li>Adaptación automática a móvil y tablet</li>
+                                        <li>Optimización para diferentes resoluciones</li>
+                                        <li>Navegación intuitiva en todos los dispositivos</li>
+                                        <li>Tiempo de carga ultra-rápido</li>
+                                    </ul>
+                                    <a href="#" class="cta-button">Ver Demos</a>
+                                </div>
+
+                                <div class="service-card-modern">
+                                    <div class="service-image">
+                                        <img src="images/services/redesSociales.png" alt="Redes sociales integradas en páginas web">
+                                    </div>
+                                    <h3>Conectividad Total</h3>
+                                    <p class="service-description">
+                                        Integramos redes sociales y sistemas de contacto para maximizar la interacción con tus usuarios.
+                                    </p>
+                                    <ul class="features-list">
+                                        <li>Integración con Facebook, Instagram, WhatsApp</li>
+                                        <li>Formularios de contacto inteligentes</li>
+                                        <li>Chat en vivo y soporte automatizado</li>
+                                        <li>Analytics y seguimiento de conversiones</li>
+                                    </ul>
+                                    <a href="#" class="cta-button">Integrar Redes</a>
+                                </div>
+
+                                <div class="service-card-modern">
+                                    <div class="service-image">
+                                        <img src="images/services/branding.png" alt="Paleta de colores, tipografías y elementos de marca aplicados">
+                                    </div>
+                                    <h3>Branding & Identidad</h3>
+                                    <p class="service-description">
+                                        Desarrollamos la identidad visual de tu marca con estilos únicos que reflejen tu personalidad empresarial.
+                                    </p>
+                                    <ul class="features-list">
+                                        <li>Paleta de colores corporativa personalizada</li>
+                                        <li>Tipografías que reflejen tu marca</li>
+                                        <li>Elementos gráficos únicos y memorables</li>
+                                        <li>Manual de marca digital incluido</li>
+                                    </ul>
+                                    <a href="#" class="cta-button">Crear Identidad</a>
+                                </div>
+
+                                <div class="service-card-modern">
+                                    <div class="service-image">
+                                        <img src="images/services/lenguajesProgramacion.png" alt="Diferentes lenguajes de programación y tecnologías modernas">
+                                    </div>
+                                    <h3>Tecnologías Modernas</h3>
+                                    <p class="service-description">
+                                        Utilizamos las tecnologías más actuales para crear sitios web robustos, seguros y escalables.
+                                    </p>
+                                    <ul class="features-list">
+                                        <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript ES6+</li>
+                                        <li><strong>Backend:</strong> .NET Core para aplicaciones robustas</li>
+                                        <li>Base de datos optimizada y segura</li>
+                                        <li>Hosting y dominio incluido primer año</li>
+                                    </ul>
+                                    <a href="#" class="cta-button">Ver Tecnologías</a>
+                                </div>
+
+                                <div class="service-card-modern">
+                                    <div class="service-image">
+                                        <img src="images/services/ecommerce.png" alt="eCommerce">
+                                    </div>
+                                    <h3>Sitios Especializados</h3>
+                                    <p class="service-description">
+                                        Creamos diferentes tipos de sitios web según tus necesidades: desde portafolios hasta tiendas completas.
+                                    </p>
+                                    <ul class="features-list">
+                                        <li><strong>Portafolios:</strong> Muestra tu trabajo profesional</li>
+                                        <li><strong>E-commerce:</strong> Tiendas online completas</li>
+                                        <li><strong>Landing Pages:</strong> Conversión optimizada</li>
+                                        <li>Sitios corporativos y educativos</li>
+                                    </ul>
+                                    <a href="#" class="cta-button">Elegir Tipo</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <ul>
-                            <li>Diseño y control de sistemas con sensores, motores y relés.</li>
-                            <li>Diseño de esquemáticos y PCBs con archivos Gerber.</li>
-                            <li>Programación en Arduino, ESP32 y STM32.</li>
-                            <li>Desarrollo de soluciones para domótica e IoT.</li>
-                            <li>Simulación y validación de circuitos antes de fabricación.</li>
-                            <li>Documentación completa: diagramas, lista de materiales (BOM) y código fuente editable.</li>
-                            <li>Entrega digital con soporte inicial.</li>
-                       <button class="btn btn-warning" onclick="window.location.href='automatizacion.html'">Más información</button>
-                    </ul>
                 </div>
-
-                <!-- Servicio 3 -->
-                <div class="plan">
-                    <div class="plan_title">
-                        <h3>Desarrollo Web</h3>
-                    </div>
-                    <ul>
-                            <li>Diseño responsive adaptable a móvil, tablet y PC.</li>
-                            <li>Integración con redes sociales y formularios de contacto.</li>
-                            <li>Personalización de estilos, branding y paleta de colores.</li>
-                            <li>Optimización para velocidad de carga y SEO básico.</li>
-                            <li>Creación de portafolios, tiendas en línea y landing pages.</li>
-                            <li>Tecnologías utilizadas: HTML, CSS, JavaScript, .Net Core.</li>
-                            <li>Entrega lista para publicar en hosting o servidor propio.</li>
-                       
-                        <button class="btn btn-warning" onclick="window.location.href='desarrolloweb.html'">Cotizar</button>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
+            </section>
+        </main>
 
 
-
-                <footer class="site-footer">
+        <footer class="site-footer">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-3 col-12 mb-4">
@@ -175,8 +381,8 @@
 
                         <ul class="footer-menu">
                             <li class="footer-menu-item"><a href="#section_2" class="footer-menu-link">Nosotros</a></li>
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Servicios</a></li>
-                            <li class="footer-menu-item"><a href="#" class="footer-menu-link">Cotizar</a></li>
+                            <li class="footer-menu-item"><a href="services.html" class="footer-menu-link">Servicios</a></li>
+                            <li class="footer-menu-item"><a href="quote.html" class="footer-menu-link">Cotizar</a></li>
                         </ul>
                     </div>
 
@@ -208,7 +414,6 @@
             <div class="site-footer-bottom">
                 <div class="container">
                     <div class="row">
-
                         <div class="col-lg-6 col-md-7 col-12">
                             <p class="copyright-text mb-0">Copyright © 2025 <a href="#">Mod.3D</a></p>
                         </div>
@@ -218,21 +423,17 @@
                                 <li class="social-icon-item">
                                     <a href="#" class="social-icon-link bi-tiktok"></a>
                                 </li>
-
                                 <li class="social-icon-item">
                                     <a href="#" class="social-icon-link bi-facebook"></a>
                                 </li>
-
                                 <li class="social-icon-item">
                                     <a href="#" class="social-icon-link bi-instagram"></a>
                                 </li>
-
                                 <li class="social-icon-item">
                                     <a href="#" class="social-icon-link bi-whatsapp"></a>
                                 </li>
                             </ul>
                         </div>
-                        
                     </div>
                 </div>
             </div>
@@ -244,7 +445,7 @@
         <script src="js/jquery.sticky.js"></script>
         <script src="js/click-scroll.js"></script>
         <script src="js/counter.js"></script>
-        <script src="js/custom.js"></script>
+        <script src="js/main.js"></script>
 
     </body>
 

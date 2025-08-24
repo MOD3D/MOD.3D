@@ -1,0 +1,555 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Mod.3D">
+
+        <title>Cotización - Mod.3D</title>
+
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        <link href="css/main.css" rel="stylesheet">
+        <link href="css/quote.css" rel="stylesheet">
+        <link rel="icon" href="images/icons/Mod3DLogo.png" type="image/png">
+    </head>
+    
+    <body>
+
+        <header class="site-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-12 d-flex flex-wrap">
+                        <p class="d-flex mb-0">
+                            <i class="bi-envelope me-2"></i>
+                            <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJZWPLSKWDWCSDKVGSxBpJGdfxllZKBprVzLBBHVCzTXfpjjPJqlBdSzQJQZmKbKjjwHBMg" target="_blank">
+                                mods.threed@gmail.com
+                            </a>
+                        </p>
+                    </div>
+
+                    <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
+                        <ul class="social-icon">
+                            <li class="social-icon-item">
+                                <a href="https://www.tiktok.com/@mod3dth" target="_blank" class="social-icon-link bi-tiktok"></a>
+                            </li>
+                            <li class="social-icon-item">
+                                <a href="https://www.facebook.com/MOD.3DOficial" target="_blank" class="social-icon-link bi-facebook"></a>
+                            </li>
+                            <li class="social-icon-item">
+                                <a href="https://instagram.com/mod3d_" target="_blank" class="social-icon-link bi-instagram"></a>
+                            </li>
+                            <li class="social-icon-item">
+                                <a href="https://wa.me/573209005608" target="_blank" class="social-icon-link bi-whatsapp"></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </header>
+
+        <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+            <div class="container">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/logo.png" class="logo img-fluid" alt="Mod3D Logo">
+                    <span>
+                        Mod3D
+                        <small>¡Materializa tus ideas!</small>
+                    </span>
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#top">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_2">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_3">Servicios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link click-scroll" href="#section_4">Contacto</a>
+                        </li>
+                        <li class="nav-item ms-3">
+                            <a class="nav-link custom-btn custom-border-btn btn" target="_blank" href="https://listado.mercadolibre.com.co/_CustId_173269988?item_id=MCO1582331833&category_id=MCO371999&seller_id=173269988&client=recoview-selleritems&recos_listing=true#origin=vip&component=sellerData&typeSeller=classic">
+                                <div class="icon-container">
+                                    <img class="icon-default" src="images/icons/mercadolibre_blue.png" alt="MercadoLibre">
+                                    <img class="icon-hover" src="images/icons/mercadolibre_white.png" alt="MercadoLibre">
+                                </div>
+                                Comprar
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        
+        <main>
+            <section class="section-padding">
+                <div class="container">
+                    <div class="title text-center">
+                        <h2>Cotización</h2>
+                        <hr>
+                        <div class="intro-text">
+                            <p>
+                                Completa el formulario con los detalles específicos de lo que necesitas y te enviaremos una propuesta detallada en las próximas <strong>24 horas</strong>. 
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="form-container">
+                                <!-- Indicador de Progreso -->
+                                <div class="progress-indicator">
+                                    <div class="step active" id="step1">1</div>
+                                    <div class="step-line" id="line1"></div>
+                                    <div class="step" id="step2">2</div>
+                                    <div class="step-line" id="line2"></div>
+                                    <div class="step" id="step3">3</div>
+                                </div>
+
+                                <form id="quotationForm">
+                                    <!-- PASO 1: Selección de Servicio -->
+                                    <div class="form-step active" id="step-1">
+                                        <h3 class="mb-4 text-center">¿Qué servicio necesitas?</h3>
+                                        
+                                        <div class="service-selector">
+                                            <div class="service-option">
+                                                <input type="radio" id="impresion3d" name="service" value="impresion3d">
+                                                <label for="impresion3d" class="service-card">
+                                                    <div class="service-icon"><i class="bi bi-printer"></i></div>
+                                                    <div class="service-name">Impresión 3D</div>
+                                                </label>
+                                            </div>
+                                            
+                                            <div class="service-option">
+                                                <input type="radio" id="automatizacion" name="service" value="automatizacion">
+                                                <label for="automatizacion" class="service-card">
+                                                    <div class="service-icon"><i class="bi bi-robot"></i></div>
+                                                    <div class="service-name">Automatización</div>
+                                                </label>
+                                            </div>
+                                            
+                                            <div class="service-option">
+                                                <input type="radio" id="desarrolloweb" name="service" value="desarrolloweb">
+                                                <label for="desarrolloweb" class="service-card">
+                                                    <div class="service-icon"><i class="bi bi-laptop"></i></div>
+                                                    <div class="service-name">Desarrollo Web</div>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                        <div class="text-center mt-4">
+                                            <button type="button" class="btn-submit" id="nextStep1" style="width: auto;" disabled>
+                                                Continuar <i class="bi bi-arrow-right ms-2"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- PASO 2: Detalles Específicos del Servicio -->
+                                    <div class="form-step" id="step-2">
+                                        <!-- Formulario para Impresión 3D -->
+                                        <div class="form-section" id="impresion3d-form">
+                                            <h3 class="mb-4">Detalles del Proyecto de Impresión 3D</h3>
+                                            
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label">¿Qué necesitas?</label>
+                                                        <div class="checkbox-group">
+                                                            <div class="checkbox-item">
+                                                                <input type="checkbox" id="diseno3d" name="impresion_servicios[]" value="diseno3d">
+                                                                <label for="diseno3d">Diseño 3D personalizado</label>
+                                                            </div>
+                                                            <div class="checkbox-item">
+                                                                <input type="checkbox" id="impresion" name="impresion_servicios[]" value="impresion">
+                                                                <label for="impresion">Solo impresión</label>
+                                                            </div>
+                                                            <div class="checkbox-item">
+                                                                <input type="checkbox" id="prototipo" name="impresion_servicios[]" value="prototipo">
+                                                                <label for="prototipo">Prototipo técnico</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="material" class="form-label">Material preferido</label>
+                                                        <select class="form-select" id="material" name="material">
+                                                            <option value="">Seleccionar material</option>
+                                                            <option value="pla">PLA (Biodegradable)</option>
+                                                            <option value="petg">PETG (Resistente)</option>
+                                                            <option value="abs">ABS (Alta resistencia)</option>
+                                                            <option value="consultar">No estoy seguro</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="calidad" class="form-label">Calidad requerida</label>
+                                                        <select class="form-select" id="calidad" name="calidad">
+                                                            <option value="">Seleccionar calidad</option>
+                                                            <option value="estandar">Estándar (0.2mm)</option>
+                                                            <option value="alta">Alta precisión (0.1mm)</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="cantidad" class="form-label">Cantidad de piezas</label>
+                                                        <input type="number" class="form-control" id="cantidad" name="cantidad" min="1" placeholder="1">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label class="form-label">Archivos del proyecto (opcional)</label>
+                                                <div class="file-upload-area" onclick="document.getElementById('files3d').click()">
+                                                    <i class="bi bi-cloud-upload" style="font-size: 2rem; color: #667eea;"></i>
+                                                    <p class="mb-0 mt-2">Arrastra archivos aquí o haz clic para seleccionar</p>
+                                                    <small class="text-muted">STL, OBJ, STEP, imágenes de referencia</small>
+                                                    <input type="file" id="files3d" name="files3d[]" multiple accept=".stl,.obj,.step,.png,.jpg,.jpeg" style="display: none;">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Formulario para Automatización -->
+                                        <div class="form-section" id="automatizacion-form">
+                                            <h3 class="mb-4">Detalles del Proyecto de Automatización</h3>
+                                            
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label">Tipo de proyecto</label>
+                                                        <div class="checkbox-group">
+                                                            <div class="checkbox-item">
+                                                                <input type="checkbox" id="control_sistemas" name="auto_servicios[]" value="control_sistemas">
+                                                                <label for="control_sistemas">Sistema de control</label>
+                                                            </div>
+                                                            <div class="checkbox-item">
+                                                                <input type="checkbox" id="pcb_design" name="auto_servicios[]" value="pcb_design">
+                                                                <label for="pcb_design">Diseño de PCB</label>
+                                                            </div>
+                                                            <div class="checkbox-item">
+                                                                <input type="checkbox" id="programacion" name="auto_servicios[]" value="programacion">
+                                                                <label for="programacion">Programación</label>
+                                                            </div>
+                                                            <div class="checkbox-item">
+                                                                <input type="checkbox" id="iot" name="auto_servicios[]" value="iot">
+                                                                <label for="iot">Solución IoT</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="plataforma" class="form-label">Plataforma preferida</label>
+                                                        <select class="form-select" id="plataforma" name="plataforma">
+                                                            <option value="">Seleccionar plataforma</option>
+                                                            <option value="arduino">Arduino</option>
+                                                            <option value="esp32">ESP32</option>
+                                                            <option value="stm32">STM32</option>
+                                                            <option value="consultar">Necesito asesoría</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label for="componentes" class="form-label">Componentes requeridos</label>
+                                                <textarea class="form-control" id="componentes" name="componentes" rows="3" placeholder="Sensores, motores, relés, pantallas, etc."></textarea>
+                                            </div>
+                                        </div>
+
+                                        <!-- Formulario para Desarrollo Web -->
+                                        <div class="form-section" id="desarrolloweb-form">
+                                            <h3 class="mb-4">Detalles del Proyecto Web</h3>
+                                            
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label">Tipo de sitio web</label>
+                                                        <div class="checkbox-group">
+                                                            <div class="checkbox-item">
+                                                                <input type="checkbox" id="portafolio" name="web_servicios[]" value="portafolio">
+                                                                <label for="portafolio">Portafolio</label>
+                                                            </div>
+                                                            <div class="checkbox-item">
+                                                                <input type="checkbox" id="ecommerce" name="web_servicios[]" value="ecommerce">
+                                                                <label for="ecommerce">Tienda online</label>
+                                                            </div>
+                                                            <div class="checkbox-item">
+                                                                <input type="checkbox" id="landing" name="web_servicios[]" value="landing">
+                                                                <label for="landing">Landing page</label>
+                                                            </div>
+                                                            <div class="checkbox-item">
+                                                                <input type="checkbox" id="corporativo" name="web_servicios[]" value="corporativo">
+                                                                <label for="corporativo">Sitio corporativo</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="paginas" class="form-label">Número de páginas estimado</label>
+                                                        <select class="form-select" id="paginas" name="paginas">
+                                                            <option value="">Seleccionar rango</option>
+                                                            <option value="1-3">1-3 páginas</option>
+                                                            <option value="4-8">4-8 páginas</option>
+                                                            <option value="9-15">9-15 páginas</option>
+                                                            <option value="16+">Más de 16 páginas</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="row">
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label class="form-label">Funcionalidades especiales</label>
+                                                        <div class="checkbox-group">
+                                                            <div class="checkbox-item">
+                                                                <input type="checkbox" id="redes_sociales" name="web_funcionalidades[]" value="redes_sociales">
+                                                                <label for="redes_sociales">Integración redes sociales</label>
+                                                            </div>
+                                                            <div class="checkbox-item">
+                                                                <input type="checkbox" id="contacto" name="web_funcionalidades[]" value="contacto">
+                                                                <label for="contacto">Formulario de contacto</label>
+                                                            </div>
+                                                            <div class="checkbox-item">
+                                                                <input type="checkbox" id="blog" name="web_funcionalidades[]" value="blog">
+                                                                <label for="blog">Sistema de blog</label>
+                                                            </div>
+                                                            <div class="checkbox-item">
+                                                                <input type="checkbox" id="multiidioma" name="web_funcionalidades[]" value="multiidioma">
+                                                                <label for="multiidioma">Multi-idioma</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                
+                                                <div class="col-md-6">
+                                                    <div class="form-group">
+                                                        <label for="hosting" class="form-label">¿Tienes hosting?</label>
+                                                        <select class="form-select" id="hosting" name="hosting">
+                                                            <option value="">Seleccionar opción</option>
+                                                            <option value="si">Sí, tengo hosting</option>
+                                                            <option value="no">No, necesito hosting</option>
+                                                            <option value="consultar">No estoy seguro</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="form-group">
+                                                <label class="form-label">Materiales de referencia (opcional)</label>
+                                                <div class="file-upload-area" onclick="document.getElementById('filesweb').click()">
+                                                    <i class="bi bi-cloud-upload" style="font-size: 2rem; color: #667eea;"></i>
+                                                    <p class="mb-0 mt-2">Logo, imágenes, contenido, sitios de referencia</p>
+                                                    <input type="file" id="filesweb" name="filesweb[]" multiple accept=".png,.jpg,.jpeg,.pdf,.doc,.docx" style="display: none;">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="text-center mt-4">
+                                            <button type="button" class="btn btn-outline-secondary me-3" id="backStep1">
+                                                <i class="bi bi-arrow-left me-2"></i> Atrás
+                                            </button>
+                                            <button type="button" class="btn-submit" id="nextStep2" style="width: auto;">
+                                                Continuar <i class="bi bi-arrow-right ms-2"></i>
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- PASO 3: Información de Contacto -->
+                                    <div class="form-step" id="step-3">
+                                        <h3 class="mb-4">Información de Contacto</h3>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="nombre" class="form-label">Nombre completo *</label>
+                                                    <input type="text" class="form-control" id="nombre" name="nombre" required>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="email" class="form-label">Correo electrónico *</label>
+                                                    <input type="email" class="form-control" id="email" name="email" required>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="telefono" class="form-label">Teléfono/WhatsApp</label>
+                                                    <input type="tel" class="form-control" id="telefono" name="telefono">
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="empresa" class="form-label">Empresa/Institución</label>
+                                                    <input type="text" class="form-control" id="empresa" name="empresa">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="presupuesto" class="form-label">Presupuesto estimado</label>
+                                                    <select class="form-select" id="presupuesto" name="presupuesto">
+                                                        <option value="">Seleccionar rango</option>
+                                                        <option value="50-200">$50,000 - $200,000 COP</option>
+                                                        <option value="200-500">$200,000 - $500,000 COP</option>
+                                                        <option value="500-1000">$500,000 - $1,000,000 COP</option>
+                                                        <option value="1000+">Más de $1,000,000 COP</option>
+                                                        <option value="consultar">Prefiero consultar</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                            
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label for="tiempo" class="form-label">Tiempo requerido</label>
+                                                    <select class="form-select" id="tiempo" name="tiempo">
+                                                        <option value="">Seleccionar tiempo</option>
+                                                        <option value="urgente">Urgente (1-3 días)</option>
+                                                        <option value="rapido">Rápido (1 semana)</option>
+                                                        <option value="normal">Normal (2-3 semanas)</option>
+                                                        <option value="flexible">Flexible (1+ mes)</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="descripcion" class="form-label">Descripción detallada del proyecto *</label>
+                                            <textarea class="form-control" id="descripcion" name="descripcion" rows="4" placeholder="Describe tu proyecto con el mayor detalle posible..." required></textarea>
+                                        </div>
+
+                                        <!-- Estimación de Costo -->
+                                        <div class="estimated-cost" id="estimatedCost">
+                                            <div class="cost-amount" id="costAmount">Cotización personalizada</div>
+                                            <div class="cost-note">Te enviaremos una propuesta detallada en 24 horas</div>
+                                        </div>
+
+                                        <div class="text-center mt-4">
+                                            <button type="button" class="btn btn-outline-secondary me-3" id="backStep2">
+                                                <i class="bi bi-arrow-left me-2"></i> Atrás
+                                            </button>
+                                            <button type="submit" class="btn-submit" id="submitForm" style="width: auto;">
+                                                <i class="bi bi-send me-2"></i> Enviar Cotización
+                                            </button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-12 mb-4">
+                        <img src="images/fullLogo.png" class="footer-logo img-fluid" alt="">
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 mb-4">
+                        <h5 class="site-footer-title mb-3">Acceso rápido</h5>
+
+                        <ul class="footer-menu">
+                            <li class="footer-menu-item"><a href="#section_2" class="footer-menu-link">Nosotros</a></li>
+                            <li class="footer-menu-item"><a href="services.html" class="footer-menu-link">Servicios</a></li>
+                            <li class="footer-menu-item"><a href="quote.html" class="footer-menu-link">Cotizar</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-12 mx-auto">
+                        <h5 class="site-footer-title mb-3">Contacto</h5>
+
+                        <p class="text-white d-flex mb-2">
+                            <i class="bi-telephone me-2"></i>
+                            <a href="tel: 3209005608" class="site-footer-link">
+                                320 900 5608
+                            </a>
+                        </p>
+
+                        <p class="text-white d-flex">
+                            <i class="bi-envelope me-2"></i>
+                            <a href="mailto:emerson.od.98@gmail.com" class="site-footer-link">
+                                emerson.od.98@gmail.com
+                            </a>
+                        </p>
+
+                        <a href="#section_4" class="custom-btn btn mt-3">Enviar correo</a>
+                    </div>
+                </div>
+            </div>
+            <main>
+
+            </main>
+
+            <div class="site-footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-7 col-12">
+                            <p class="copyright-text mb-0">Copyright © 2025 <a href="#">Mod.3D</a></p>
+                        </div>
+                        
+                        <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
+                            <ul class="social-icon">
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-tiktok"></a>
+                                </li>
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-facebook"></a>
+                                </li>
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-instagram"></a>
+                                </li>
+                                <li class="social-icon-item">
+                                    <a href="#" class="social-icon-link bi-whatsapp"></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <!-- JAVASCRIPT FILES -->
+        <script src="js/jquery.min.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/jquery.sticky.js"></script>
+        <script src="js/click-scroll.js"></script>
+        <script src="js/counter.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/quote.js"></script>
+
+    </body>
+
+</html>
