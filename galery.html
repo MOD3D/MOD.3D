@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="Mod.3D">
+  <title>Servicios - Mod.3D</title>
+
+  <!-- CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/bootstrap-icons.css" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+  <link href="css/gallery.css" rel="stylesheet">
+  <link rel="icon" href="images/icons/Mod3DLogo.png" type="image/png">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-12 d-flex flex-wrap">
+          <p class="d-flex mb-0">
+            <i class="bi-envelope me-2"></i>
+            <a href="mailto:mods.threed@gmail.com" target="_blank">mods.threed@gmail.com</a>
+          </p>
+        </div>
+        <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
+          <ul class="social-icon">
+            <li class="social-icon-item"><a href="https://www.tiktok.com/@mod3dth" target="_blank" class="social-icon-link bi-tiktok"></a></li>
+            <li class="social-icon-item"><a href="https://www.facebook.com/MOD.3DOficial" target="_blank" class="social-icon-link bi-facebook"></a></li>
+            <li class="social-icon-item"><a href="https://instagram.com/mod3d_" target="_blank" class="social-icon-link bi-instagram"></a></li>
+            <li class="social-icon-item"><a href="https://wa.me/573209005608" target="_blank" class="social-icon-link bi-whatsapp"></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <nav class="navbar navbar-expand-lg bg-light shadow-lg">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logo.png" class="logo img-fluid" alt="Mod3D Logo">
+        <span>Mod3D<small>¡Materializa tus ideas!</small></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="/index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="/team.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="/services.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="/quote.html">Contacto</a></li>
+          <li class="nav-item ms-3">
+            <a class="nav-link custom-btn custom-border-btn btn" target="_blank" href="https://listado.mercadolibre.com.co/_CustId_173269988">
+              <div class="icon-container">
+                <img class="icon-default" src="images/icons/mercadolibre_blue.png" alt="MercadoLibre">
+                <img class="icon-hover" src="images/icons/mercadolibre_white.png" alt="MercadoLibre">
+              </div>
+              Comprar
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <div class="container py-5">
+      <h2 class="text-center mb-4 fw-bold">Galería</h2>
+
+      <div class="text-center filter-btns">
+        <button class="btn btn-outline-dark active" data-filter="*">Todos</button>
+        <button class="btn btn-outline-dark" data-filter=".impresion3D">Impresión 3D</button>
+        <button class="btn btn-outline-dark" data-filter=".automatizacion">Automatización</button>
+        <button class="btn btn-outline-dark" data-filter=".desarrolloWeb">Desarrollo Web</button>
+      </div>
+
+      <!-- Contenedor principal -->
+      <div class="gallery-grid"></div>
+
+      <div class="loading">
+        <div class="spinner-border" role="status">
+          <span class="visually-hidden">Cargando...</span>
+        </div>
+        <p class="mt-2">Cargando imágenes...</p>
+      </div>
+    </div>
+  </main>
+
+  <div class="image-modal" id="imageModal">
+    <div class="modal-container" id="modalContainer">
+        <img class="modal-content" id="modalImage" alt="">
+    </div>
+    <span class="close">&times;</span>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-3 col-12 mb-4">
+                  <img src="images/fullLogo.png" class="footer-logo img-fluid" alt="">
+              </div>
+
+              <div class="col-lg-4 col-md-6 col-12 mb-4">
+                  <h5 class="site-footer-title mb-3">Acceso rápido</h5>
+
+                  <ul class="footer-menu">
+                      <li class="footer-menu-item"><a href="#section_2" class="footer-menu-link">Nosotros</a></li>
+                      <li class="footer-menu-item"><a href="services.html" class="footer-menu-link">Servicios</a></li>
+                      <li class="footer-menu-item"><a href="quote.html" class="footer-menu-link">Cotizar</a></li>
+                  </ul>
+              </div>
+
+              <div class="col-lg-4 col-md-6 col-12 mx-auto">
+                  <h5 class="site-footer-title mb-3">Contacto</h5>
+
+                  <p class="text-white d-flex mb-2">
+                      <i class="bi-telephone me-2"></i>
+                      <a href="tel: 3209005608" class="site-footer-link">
+                          320 900 5608
+                      </a>
+                  </p>
+
+                  <p class="text-white d-flex">
+                      <i class="bi-envelope me-2"></i>
+                      <a href="mailto:emerson.od.98@gmail.com" class="site-footer-link">
+                          emerson.od.98@gmail.com
+                      </a>
+                  </p>
+
+                  <a href="#section_4" class="custom-btn btn mt-3">Enviar correo</a>
+              </div>
+          </div>
+      </div>
+
+      <div class="site-footer-bottom">
+          <div class="container">
+              <div class="row">
+                  <div class="col-lg-6 col-md-7 col-12">
+                      <p class="copyright-text mb-0">Copyright © 2025 <a href="#">Mod.3D</a></p>
+                  </div>
+                  
+                  <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
+                      <ul class="social-icon">
+                          <li class="social-icon-item">
+                              <a href="#" class="social-icon-link bi-tiktok"></a>
+                          </li>
+                          <li class="social-icon-item">
+                              <a href="#" class="social-icon-link bi-facebook"></a>
+                          </li>
+                          <li class="social-icon-item">
+                              <a href="#" class="social-icon-link bi-instagram"></a>
+                          </li>
+                          <li class="social-icon-item">
+                              <a href="#" class="social-icon-link bi-whatsapp"></a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/gallery.js"></script>
+
+</body>
+</html>
