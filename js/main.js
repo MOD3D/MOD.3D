@@ -52,3 +52,11 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 100);
     }
 });
+
+
+document.getElementById("contact-form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  this.reset();
+  alert("📧 ¡Mensaje enviado con éxito!");
+});

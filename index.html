@@ -228,7 +228,6 @@
 
                         <br>
                         <div class="row">
-                            <!-- Nuestra Misión -->
                             <div class="col-lg-6 col-md-6 col-12">
                                 <div class="custom-text-box mb-lg-0">
                                     <h5 class="mb-3">Nuestra Misión</h5>
@@ -252,7 +251,6 @@
                                 </div>
                             </div>
 
-                            <!-- Nuestra Visión -->
                             <div class="col-lg-6 col-md-6 col-12">
                                 <div class="custom-text-box mb-lg-0">
                                     <h5 class="mb-3">Nuestra Visión</h5>
@@ -439,12 +437,6 @@
                         </div>
 
                         <div class="col-lg-5 col-12 mx-auto">
-                            <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-                                <script type="text/javascript">
-                                (function(){
-                                    emailjs.init("cZ_mrECbofu3C0kNQ"); // Reemplaza con tu Public Key de EmailJS
-                                })();
-                                </script>
                             <form class="custom-form contact-form" id="contact-form" method="post" role="form">
                                 <h2>Contacto</h2>
 
@@ -467,18 +459,6 @@
 
                                 <button type="submit" class="form-control">Enviar</button>
                             </form>
-                            <script>
-                                document.getElementById("contact-form").addEventListener("submit", function(e) {
-                                    e.preventDefault();
-
-                                    emailjs.sendForm("service_ri3elhv", "template_ithzw03", this)
-                                    .then(function() {
-                                        alert("📧 ¡Mensaje enviado con éxito!");
-                                    }, function(error) {
-                                        alert("❌ Error al enviar: " + JSON.stringify(error));
-                                    });
-                                });
-                            </script>
                         </div>
 
                     </div>
