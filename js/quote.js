@@ -1,9 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
-    // Variables globales
     let currentStep = 1;
     const totalSteps = 3;
     
-    // Referencias a elementos
     const form = document.getElementById('quotationForm');
     const serviceRadios = document.querySelectorAll('input[name="service"]');
     const nextStep1 = document.getElementById('nextStep1');
@@ -12,14 +10,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const backStep2 = document.getElementById('backStep2');
     const submitForm = document.getElementById('submitForm');
 
-    // Inicialización
+    const urlParams = new URLSearchParams(window.location.search);
+    const preselectedService = urlParams.get('service');
+
     updateProgressIndicator();
     setupEventListeners();
     setupFileUpload();
 
-    // Event Listeners
     function setupEventListeners() {
-        // Selección de servicio
         serviceRadios.forEach(radio => {
             radio.addEventListener('change', function() {
                 nextStep1.disabled = false;
@@ -27,67 +25,52 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
 
-        // Navegación entre pasos
         nextStep1.addEventListener('click', () => goToStep(2));
         nextStep2.addEventListener('click', () => goToStep(3));
         backStep1.addEventListener('click', () => goToStep(1));
         backStep2.addEventListener('click', () => goToStep(2));
 
-        // Envío del formulario
         form.addEventListener('submit', handleFormSubmit);
-
-        // Validación en tiempo real
         setupRealTimeValidation();
     }
 
-    // Mostrar formulario específico del servicio
+
     function showServiceForm(service) {
-        // Ocultar todos los formularios
         document.querySelectorAll('.form-section').forEach(section => {
             section.classList.remove('active');
         });
 
-        // Mostrar formulario específico
         const targetForm = document.getElementById(service + '-form');
         if (targetForm) {
             targetForm.classList.add('active');
         }
     }
 
-    // Navegación entre pasos
     function goToStep(step) {
         if (step < 1 || step > totalSteps) return;
         
-        // Validar paso actual antes de avanzar
         if (step > currentStep && !validateCurrentStep()) {
             return;
         }
 
-        // Ocultar paso actual
         document.getElementById(`step-${currentStep}`).classList.remove('active');
-        
-        // Mostrar nuevo paso
         document.getElementById(`step-${step}`).classList.add('active');
         
-        // Actualizar paso actual
         currentStep = step;
         
-        // Actualizar indicador de progreso
         updateProgressIndicator();
 
-        // Mostrar estimación en el paso final
         if (step === 3) {
             showEstimatedCost();
         }
 
-        // Scroll al inicio del formulario
         document.querySelector('.form-container').scrollIntoView({ 
             behavior: 'smooth', 
             block: 'start' 
         });
     }
 
-    // Actualizar indicador de progreso
+
     function updateProgressIndicator() {
         for (let i = 1; i <= totalSteps; i++) {
             const step = document.getElementById(`step${i}`);
@@ -107,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Validar paso actual
+    
     function validateCurrentStep() {
         switch (currentStep) {
             case 1:
@@ -129,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Validar formulario de servicio específico
+    
     function validateServiceForm() {
         const selectedService = document.querySelector('input[name="service"]:checked').value;
         
@@ -162,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return true;
     }
 
-    // Validar formulario de contacto
+    
     function validateContactForm() {
         const nombre = document.getElementById('nombre').value.trim();
         const email = document.getElementById('email').value.trim();
@@ -195,13 +178,13 @@ document.addEventListener('DOMContentLoaded', function() {
         return true;
     }
 
-    // Validar email
+    
     function isValidEmail(email) {
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return emailRegex.test(email);
     }
 
-    // Configurar validación en tiempo real
+    
     function setupRealTimeValidation() {
         const emailInput = document.getElementById('email');
         emailInput.addEventListener('blur', function() {
@@ -212,7 +195,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
 
-        // Validar campos requeridos
         const requiredFields = ['nombre', 'email', 'descripcion'];
         requiredFields.forEach(fieldId => {
             const field = document.getElementById(fieldId);
@@ -228,23 +210,20 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Mostrar costo estimado
+    
     function showEstimatedCost() {
         const estimatedCost = document.getElementById('estimatedCost');
         estimatedCost.classList.add('show');
         
-        // Aquí podrías implementar lógica para calcular un costo estimado
-        // basado en las selecciones del usuario
         const cost = calculateEstimatedCost();
         document.getElementById('costAmount').textContent = cost;
     }
 
-    // Calcular costo estimado (función simplificada)
+
     function calculateEstimatedCost() {
         const selectedService = document.querySelector('input[name="service"]:checked');
         if (!selectedService) return 'Cotización personalizada';
 
-        // Esta es una lógica básica - deberías ajustarla según tus precios reales
         const basePrices = {
             'impresion3d': 'Desde $50,000 COP',
             'automatizacion': 'Desde $200,000 COP',
@@ -254,17 +233,15 @@ document.addEventListener('DOMContentLoaded', function() {
         return basePrices[selectedService.value] || 'Cotización personalizada';
     }
 
-    // Configurar carga de archivos
+
     function setupFileUpload() {
         const uploadAreas = document.querySelectorAll('.file-upload-area');
         
         uploadAreas.forEach(area => {
-            // Prevenir comportamiento por defecto del drag & drop
             ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
                 area.addEventListener(eventName, preventDefaults, false);
             });
 
-            // Resaltar área cuando se arrastra archivo
             ['dragenter', 'dragover'].forEach(eventName => {
                 area.addEventListener(eventName, () => area.classList.add('dragover'), false);
             });
@@ -273,7 +250,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 area.addEventListener(eventName, () => area.classList.remove('dragover'), false);
             });
 
-            // Manejar archivos arrastrados
             area.addEventListener('drop', handleDrop, false);
         });
 
@@ -293,7 +269,6 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
 
-        // Actualizar display de archivos seleccionados
         document.querySelectorAll('input[type="file"]').forEach(input => {
             input.addEventListener('change', function(e) {
                 updateFileDisplay(this, this.files);
@@ -314,7 +289,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // Manejar envío del formulario
+    
     function handleFormSubmit(e) {
         e.preventDefault();
         
@@ -322,21 +297,17 @@ document.addEventListener('DOMContentLoaded', function() {
             return;
         }
 
-        // Mostrar loader
         submitForm.disabled = true;
         submitForm.innerHTML = '<span class="spinner-border spinner-border-sm me-2"></span> Enviando...';
 
-        // Recopilar datos del formulario
         const formData = new FormData(form);
         
-        // Simular envío (aquí integrarías con tu backend)
         setTimeout(() => {
-            // Mostrar mensaje de éxito
             showSuccessMessage();
         }, 2000);
     }
 
-    // Mostrar mensaje de éxito
+
     function showSuccessMessage() {
         const container = document.querySelector('.form-container');
         container.innerHTML = `
@@ -373,7 +344,7 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
     }
 
-    // Función para mostrar/ocultar pasos
+    
     const formSteps = document.querySelectorAll('.form-step');
     formSteps.forEach((step, index) => {
         if (index === 0) {
@@ -383,7 +354,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Mostrar/ocultar pasos con animación
+    
     window.showStep = function(stepNumber) {
         formSteps.forEach((step, index) => {
             if (index === stepNumber - 1) {
@@ -396,7 +367,29 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     };
 
-    // Override goToStep para usar showStep
+    
+    // const originalGoToStep = goToStep;
+    // goToStep = function(step) {
+    //     if (step < 1 || step > totalSteps) return;
+        
+    //     if (step > currentStep && !validateCurrentStep()) {
+    //         return;
+    //     }
+
+    //     currentStep = step;
+    //     showStep(step);
+    //     updateProgressIndicator();
+
+    //     if (step === 3) {
+    //         showEstimatedCost();
+    //     }
+
+    //     document.querySelector('.form-container').scrollIntoView({ 
+    //         behavior: 'smooth', 
+    //         block: 'start' 
+    //     });
+    // };
+
     const originalGoToStep = goToStep;
     goToStep = function(step) {
         if (step < 1 || step > totalSteps) return;
@@ -418,4 +411,15 @@ document.addEventListener('DOMContentLoaded', function() {
             block: 'start' 
         });
     };
+
+    if (preselectedService === 'desarrolloweb') {
+        const webServiceRadio = document.getElementById('desarrolloweb');
+        if (webServiceRadio) {
+            webServiceRadio.checked = true;
+        }
+
+        showServiceForm('desarrolloweb');
+        goToStep(2);
+    }
+
 });
